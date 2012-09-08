@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Active incidents:
+  = @dashboard.active_incidents
+%p
+  %b Active problems:
+  = @dashboard.active_problems
+%p
+  %b Requested changes:
+  = @dashboard.requested_changes
+
+= link_to 'Edit', edit_dashboard_path(@dashboard)
+\|
+= link_to 'Back', dashboards_path
