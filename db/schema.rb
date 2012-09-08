@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120908102122) do
+ActiveRecord::Schema.define(:version => 20120908122230) do
 
   create_table "dashboards", :force => true do |t|
     t.integer  "active_incidents"
@@ -19,6 +19,18 @@ ActiveRecord::Schema.define(:version => 20120908102122) do
     t.integer  "requested_changes"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+  end
+
+  create_table "incidents", :force => true do |t|
+    t.string   "key"
+    t.string   "service"
+    t.string   "description"
+    t.string   "severity"
+    t.string   "status"
+    t.datetime "open_time"
+    t.datetime "close_time"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end

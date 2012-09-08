@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Key:
+  = @incident.key
+%p
+  %b Service:
+  = @incident.service
+%p
+  %b Description:
+  = @incident.description
+%p
+  %b Severity:
+  = @incident.severity
+%p
+  %b Status:
+  = @incident.status
+%p
+  %b Open time:
+  = @incident.open_time
+%p
+  %b Close time:
+  = @incident.close_time
+
+= link_to 'Edit', edit_incident_path(@incident)
+\|
+= link_to 'Back', incidents_path

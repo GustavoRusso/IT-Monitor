@@ -1,5 +1,6 @@
 ItScreen::Application.routes.draw do
   resources :dashboards
+  resources :incidents
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
