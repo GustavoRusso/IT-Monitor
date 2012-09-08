@@ -5,13 +5,24 @@ gem "haml-rails"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+group :development do
+ gem "rspec-rails", "~> 2.0"
+ gem 'cucumber-rails', :require => false
+end
+
 group :development, :test do
  gem 'sqlite3'
- gem "rspec-rails", "~> 2.0"
 end
+
 group :test do
   gem 'rspec', '2.11'
+ gem 'database_cleaner'
   gem 'capybara'
+ gem 'launchy'
+end
+
+group :production do
+ gem 'pg'
 end
 
 # Gems used only for assets and not required
