@@ -1,9 +1,9 @@
 ItScreen::Application.routes.draw do
-  resources :dashboards
-  resources :incidents
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
+  resource :monitor, :only => [:show]
+  resources :dashboards
+  resources :incidents
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
@@ -50,8 +50,7 @@ ItScreen::Application.routes.draw do
   #   end
 
   # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
-root :to => 'dashboards#index'
+root :to => "monitors#show"
 
   # See how all your routes lay out with "rake routes"
 
