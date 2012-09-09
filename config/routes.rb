@@ -1,8 +1,7 @@
-ItScreen::Application.routes.draw do
+ITMonitor::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
   resource :monitor, :only => [:show]
-  resources :dashboards
   resources :incidents
 
   # Sample of regular route:
