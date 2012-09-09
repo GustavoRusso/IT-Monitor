@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-ItScreen::Application.load_tasks
+ITMonitor::Application.load_tasks
