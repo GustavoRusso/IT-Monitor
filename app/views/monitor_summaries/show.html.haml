@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Active incidents:
+  = @monitor_summary.active_incidents
+
+= link_to 'Edit', edit_monitor_summary_path(@monitor_summary)
+\|
+= link_to 'Back', monitor_summaries_path

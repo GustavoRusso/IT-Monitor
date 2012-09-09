@@ -1,4 +1,6 @@
 ITMonitor::Application.routes.draw do
+  resources :monitor_summaries
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
   resource :monitor, :only => [:show]

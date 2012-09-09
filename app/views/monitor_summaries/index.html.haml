@@ -1,0 +1,19 @@
+%h1 Listing monitor_summaries
+
+%table
+  %tr
+    %th Active incidents
+    %th
+    %th
+    %th
+
+  - @monitor_summaries.each do |monitor_summary|
+    %tr
+      %td= monitor_summary.active_incidents
+      %td= link_to 'Show', monitor_summary
+      %td= link_to 'Edit', edit_monitor_summary_path(monitor_summary)
+      %td= link_to 'Destroy', monitor_summary, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Monitor summary', new_monitor_summary_path
